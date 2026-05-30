@@ -1,8 +1,6 @@
 import React, { useEffect, useRef } from 'react';
-
 export default function InteractiveBackground() {
   const canvasRef = useRef(null);
-
   useEffect(() => {
     const canvas = canvasRef.current;
     if (!canvas) return;
@@ -10,14 +8,11 @@ export default function InteractiveBackground() {
     let animationFrameId;
     let particles = [];
     let mouse = { x: null, y: null, radius: 150 };
-
     const handleMouseMove = (e) => {
       mouse.x = e.clientX;
       mouse.y = e.clientY;
     };
-
     window.addEventListener('mousemove', handleMouseMove);
-
     class Particle {
       constructor(x, y, dx, dy, size, color) {
         this.x = x;
@@ -38,8 +33,6 @@ export default function InteractiveBackground() {
         if (this.y > canvas.height || this.y < 0) this.dy = -this.dy;
         this.x += this.dx;
         this.y += this.dy;
-
-        // Mouse interaction
         let distX = mouse.x - this.x;
         let distY = mouse.y - this.y;
         let distance = Math.sqrt(distX * distX + distY * distY);
@@ -52,7 +45,6 @@ export default function InteractiveBackground() {
         this.draw();
       }
     }
-
     const initCanvas = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -64,12 +56,10 @@ export default function InteractiveBackground() {
         let y = Math.random() * (canvas.height - size * 2) + size;
         let dx = (Math.random() - 0.5) * 0.5;
         let dy = (Math.random() - 0.5) * 0.5;
-        // Cyan (#0ea5e9) and Purple (#a855f7)
         let color = Math.random() > 0.5 ? '#0ea5e9' : '#a855f7';
         particles.push(new Particle(x, y, dx, dy, size, color));
       }
     };
-
     const connect = () => {
       for (let a = 0; a < particles.length; a++) {
         for (let b = a; b < particles.length; b++) {
@@ -87,7 +77,6 @@ export default function InteractiveBackground() {
         }
       }
     };
-
     const animate = () => {
       animationFrameId = requestAnimationFrame(animate);
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -96,21 +85,20 @@ export default function InteractiveBackground() {
       }
       connect();
     };
-
     window.addEventListener('resize', initCanvas);
     initCanvas();
     animate();
-
     return () => {
       window.removeEventListener('mousemove', handleMouseMove);
       window.removeEventListener('resize', initCanvas);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
-
   return (
-    <div className="fixed inset-0 z-0 bg-[#020202] overflow-hidden parallax-bg pointer-events-none">
-      {/* Blueprint Grid */}
+    <div 
+      className="fixed inset-0 z-0 overflow-hidden pointer-events-none"
+      style={{ backgroundColor: 'var(--bg-main)', transition: 'background-color 0.3s ease' }}
+    >
       <div 
         className="absolute inset-0 opacity-[0.15]" 
         style={{
@@ -118,15 +106,9 @@ export default function InteractiveBackground() {
           backgroundSize: '40px 40px'
         }}
       ></div>
-      
-      {/* Neural Network Canvas */}
       <canvas ref={canvasRef} className="absolute inset-0 w-full h-full"></canvas>
-      
-      {/* Atmospheric Glows */}
       <div className="absolute w-[600px] h-[600px] -top-48 -left-48 rounded-full bg-brand/10 blur-[120px] mix-blend-screen animate-[pulse_15s_infinite_ease-in-out]"></div>
       <div className="absolute w-[500px] h-[500px] bottom-0 -right-24 rounded-full bg-ai/10 blur-[120px] mix-blend-screen animate-[pulse_20s_infinite_ease-in-out_reverse]"></div>
-      
-      {/* Scanlines */}
       <div 
         className="absolute inset-0 opacity-[0.03]"
         style={{

@@ -1,12 +1,9 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger);
-
 export default function ProblemStatement() {
   const containerRef = useRef(null);
-
   useEffect(() => {
     let ctx = gsap.context(() => {
       gsap.utils.toArray('.section-header').forEach(header => {
@@ -21,7 +18,6 @@ export default function ProblemStatement() {
           }
         });
       });
-
       gsap.utils.toArray('.fade-up-elem').forEach(elem => {
         gsap.from(elem, {
           y: 60,
@@ -33,7 +29,6 @@ export default function ProblemStatement() {
           }
         });
       });
-
       gsap.from(".stagger-item-left", {
         x: -30, opacity: 0, duration: 0.8, stagger: 0.15,
         scrollTrigger: { trigger: ".stagger-item-left", start: "top 85%" }
@@ -45,7 +40,6 @@ export default function ProblemStatement() {
     }, containerRef);
     return () => ctx.revert();
   }, []);
-
   return (
     <section id="problem" ref={containerRef} className="min-h-screen flex flex-col justify-center py-24 px-6 relative">
       <div className="max-w-7xl mx-auto w-full">
@@ -53,9 +47,7 @@ export default function ProblemStatement() {
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Why Change Was Necessary?</h2>
           <p className="text-slate-400 max-w-2xl mx-auto">Transitioning from a highly manual, error-prone legacy process to an intelligent, centralized digital workspace.</p>
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
-          {/* Before */}
           <div className="solid-card rounded-3xl p-8 lg:p-12 border-danger/20 glow-danger relative overflow-hidden fade-up-elem">
             <div className="absolute top-0 right-0 p-6 opacity-10">
               <span className="material-symbols-outlined text-9xl text-danger">history</span>
@@ -64,7 +56,6 @@ export default function ProblemStatement() {
               <span className="material-symbols-outlined text-danger text-3xl">warning</span>
               <h3 className="font-display text-2xl font-bold text-white">Legacy Process</h3>
             </div>
-
             <div className="space-y-8 relative z-10">
               <div className="flex items-start space-x-4 stagger-item-left">
                 <div className="w-10 h-10 rounded-full bg-danger/10 flex items-center justify-center shrink-0 border border-danger/20">
@@ -95,8 +86,6 @@ export default function ProblemStatement() {
               </div>
             </div>
           </div>
-
-          {/* After */}
           <div className="solid-card rounded-3xl p-8 lg:p-12 border-brand/30 glow-cyan relative overflow-hidden fade-up-elem">
             <div className="absolute top-0 right-0 p-6 opacity-10">
               <span className="material-symbols-outlined text-9xl text-brand">bolt</span>
@@ -105,7 +94,6 @@ export default function ProblemStatement() {
               <span className="material-symbols-outlined text-brand text-3xl">check_circle</span>
               <h3 className="font-display text-2xl font-bold text-white">AEs Webapp Flow</h3>
             </div>
-
             <div className="space-y-8 relative z-10">
               <div className="flex items-start space-x-4 stagger-item-right">
                 <div className="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center shrink-0 border border-brand/30">

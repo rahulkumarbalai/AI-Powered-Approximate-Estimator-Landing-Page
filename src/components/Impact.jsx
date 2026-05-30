@@ -1,9 +1,7 @@
 import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
 gsap.registerPlugin(ScrollTrigger);
-
 export default function Impact() {
   useEffect(() => {
     const counters = document.querySelectorAll('.counter');
@@ -24,12 +22,10 @@ export default function Impact() {
       });
     });
   }, []);
-
   return (
-    <section id="impact" className="py-24 px-6 relative bg-gradient-to-b from-transparent to-[#050914] border-t border-white/5">
+    <section id="impact" className="py-24 px-6 relative" style={{ background: 'linear-gradient(to bottom, transparent, #020202)' }}>
       <div className="max-w-6xl mx-auto w-full text-center">
         <h2 className="font-display text-4xl md:text-5xl font-bold mb-16 text-white section-header">Engineering Impact</h2>
-
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           <div className="neo-card p-8 rounded-3xl border-brand/20 glow-cyan">
             <div className="text-4xl md:text-5xl font-display font-bold text-brand mb-2 counter" data-target="90">0</div>
