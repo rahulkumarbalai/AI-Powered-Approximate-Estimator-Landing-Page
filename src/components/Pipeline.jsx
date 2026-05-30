@@ -5,21 +5,27 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Pipeline() {
+  const sectionRef = useRef(null);
   const svgRef = useRef(null);
   const nodesRef = useRef({});
 
   useEffect(() => {
-    gsap.from(".pipeline-step", {
-      y: 40,
-      opacity: 0,
-      duration: 0.6,
-      stagger: 0.2,
-      ease: "power2.out",
-      scrollTrigger: {
-        trigger: ".pipeline-container",
-        start: "top 75%"
-      }
-    });
+    let ctx = gsap.context(() => {
+      gsap.fromTo(".pipeline-step", 
+        { y: 40, opacity: 0 },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: "power2.out",
+          scrollTrigger: {
+            trigger: ".pipeline-container",
+            start: "top 75%"
+          }
+        }
+      );
+    }, sectionRef);
 
     const svgContainer = svgRef.current;
     
@@ -132,11 +138,12 @@ export default function Pipeline() {
       if (pipelineBox) {
         pipelineBox.removeEventListener('click', resetHandler);
       }
+      ctx.revert();
     };
   }, []);
 
   return (
-    <section id="pipeline" className="min-h-screen py-24 px-6 relative flex flex-col justify-center">
+    <section id="pipeline" ref={sectionRef} className="min-h-screen py-24 px-6 relative flex flex-col justify-center">
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="text-center mb-20 section-header">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Hybrid Search Pipeline</h2>
