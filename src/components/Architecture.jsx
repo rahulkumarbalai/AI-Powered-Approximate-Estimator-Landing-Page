@@ -60,7 +60,7 @@ export default function Architecture() {
 
           {/* Nodes */}
           {/* Client */}
-          <div className="absolute left-0 lg:left-[5%] top-1/2 -translate-y-1/2 w-64 glass-card p-6 rounded-2xl arch-node z-10 border-brand/30">
+          <div className="absolute left-0 lg:left-[5%] top-1/2 -translate-y-1/2 w-64 solid-card p-6 rounded-2xl arch-node z-10 border-brand/30">
             <div className="flex items-center space-x-3 mb-4">
               <span className="material-symbols-outlined text-brand text-2xl">laptop_mac</span>
               <h3 className="font-display font-bold text-white">Client Tier</h3>
@@ -74,7 +74,7 @@ export default function Architecture() {
           </div>
 
           {/* Backend API */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-[15%] w-64 glass-card p-6 rounded-2xl arch-node z-10 border-white/10">
+          <div className="absolute left-1/2 -translate-x-1/2 top-[15%] w-64 solid-card p-6 rounded-2xl arch-node z-10 border-white/10">
             <div className="flex items-center space-x-3 mb-4">
               <span className="material-symbols-outlined text-slate-300 text-2xl">dns</span>
               <h3 className="font-display font-bold text-white">API Gateway</h3>
@@ -88,7 +88,7 @@ export default function Architecture() {
           </div>
 
           {/* AI Service */}
-          <div className="absolute left-1/2 -translate-x-1/2 top-[70%] w-64 glass-card p-6 rounded-2xl arch-node z-10 border-ai/30 glow-purple">
+          <div className="absolute left-1/2 -translate-x-1/2 top-[70%] w-64 solid-card p-6 rounded-2xl arch-node z-10 border-ai/30 glow-purple">
             <div className="flex items-center space-x-3 mb-4">
               <span className="material-symbols-outlined text-ai text-2xl">neurology</span>
               <h3 className="font-display font-bold text-white">AI Microservice</h3>
@@ -102,7 +102,7 @@ export default function Architecture() {
           </div>
 
           {/* Database */}
-          <div className="absolute right-0 lg:right-[5%] top-1/2 -translate-y-1/2 w-64 glass-card p-6 rounded-2xl arch-node z-10 border-success/30">
+          <div className="absolute right-0 lg:right-[5%] top-1/2 -translate-y-1/2 w-64 solid-card p-6 rounded-2xl arch-node z-10 border-success/30">
             <div className="flex items-center space-x-3 mb-4">
               <span className="material-symbols-outlined text-success text-2xl">database</span>
               <h3 className="font-display font-bold text-white">Data Tier</h3>

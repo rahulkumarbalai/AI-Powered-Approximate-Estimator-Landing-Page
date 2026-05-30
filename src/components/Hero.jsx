@@ -48,25 +48,25 @@ export default function Hero() {
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-4xl mx-auto reveal-up delay-300">
-          <div className="glass-card p-5 rounded-2xl flex flex-col items-start hover:border-brand/40 transition-colors">
-            <span className="material-symbols-outlined text-brand mb-3">search_spark</span>
-            <div className="font-display font-medium text-sm text-white mb-1">Hybrid Search</div>
-            <p className="text-[10px] text-slate-400 text-left">FAISS + BM25 Retrieval</p>
+          <div className="glass-card p-5 rounded-2xl flex flex-col items-start hover:border-brand/40 hover:glow-cyan transition-all duration-300">
+            <span className="material-symbols-outlined text-brand text-2xl mb-3">account_tree</span>
+            <h3 className="text-white font-medium mb-1">Hybrid Search</h3>
+            <p className="text-slate-400 text-sm">Semantic & Keyword</p>
           </div>
-          <div className="glass-card p-5 rounded-2xl flex flex-col items-start hover:border-ai/40 transition-colors">
-            <span className="material-symbols-outlined text-ai mb-3">database</span>
-            <div className="font-display font-medium text-sm text-white mb-1">Unified DB</div>
-            <p className="text-[10px] text-slate-400 text-left">DSR + Market Rates</p>
+          <div className="glass-card p-5 rounded-2xl flex flex-col items-start hover:border-ai/40 hover:glow-purple transition-all duration-300">
+            <span className="material-symbols-outlined text-ai text-2xl mb-3">database</span>
+            <h3 className="text-white font-medium mb-1">Unified DB</h3>
+            <p className="text-slate-400 text-sm">CPWD, MoRTH & More</p>
           </div>
-          <div className="glass-card p-5 rounded-2xl flex flex-col items-start hover:border-success/40 transition-colors">
-            <span className="material-symbols-outlined text-success mb-3">table_chart</span>
-            <div className="font-display font-medium text-sm text-white mb-1">Excel Automate</div>
-            <p className="text-[10px] text-slate-400 text-left">One-click formatted exports</p>
+          <div className="glass-card p-5 rounded-2xl flex flex-col items-start hover:border-success/40 hover:glow-emerald transition-all duration-300">
+            <span className="material-symbols-outlined text-success text-2xl mb-3">table_chart</span>
+            <h3 className="text-white font-medium mb-1">Excel Automate</h3>
+            <p className="text-slate-400 text-sm">Instant Export</p>
           </div>
-          <div className="glass-card p-5 rounded-2xl flex flex-col items-start hover:border-brandLight/40 transition-colors">
-            <span className="material-symbols-outlined text-brandLight mb-3">psychology</span>
-            <div className="font-display font-medium text-sm text-white mb-1">Predictive AI</div>
-            <p className="text-[10px] text-slate-400 text-left">50-70% auto-population</p>
+          <div className="glass-card p-5 rounded-2xl flex flex-col items-start hover:border-brandLight/40 hover:glow-cyan transition-all duration-300">
+            <span className="material-symbols-outlined text-brandLight text-2xl mb-3">model_training</span>
+            <h3 className="text-white font-medium mb-1">Predictive AI</h3>
+            <p className="text-slate-400 text-sm">Smart Cost Scaling</p>
           </div>
         </div>
 

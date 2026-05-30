@@ -38,7 +38,7 @@ export default function Workflows() {
   }, []);
 
   return (
-    <section id="workflows" className="horizontal-section border-y border-white/5 bg-[#020202]" ref={horizontalSectionRef}>
+    <section id="workflows" className="horizontal-section border-y border-white/5" ref={horizontalSectionRef}>
       <div className="horizontal-wrapper" ref={wrapperRef}>
 
         {/* Slide 1: Manual Process */}
@@ -51,7 +51,7 @@ export default function Workflows() {
               <p className="text-slate-400 font-light leading-relaxed">Manual, repetitive, and time-consuming. A fragmented workflow dependent on books and single spreadsheets.</p>
             </div>
 
-            <div className="lg:col-span-2 relative flex items-center justify-between w-full p-8 glass-card border-danger/20 rounded-3xl">
+            <div className="lg:col-span-2 relative flex items-center justify-between w-full p-8 solid-card border-danger/20 rounded-3xl">
               <div className="absolute top-1/2 left-0 w-full h-1 bg-white/5 -translate-y-1/2"></div>
               
               <div className="flow-node">
@@ -85,8 +85,8 @@ export default function Workflows() {
           </div>
         </div>
 
-        {/* Slide 2: V1.0 */}
-        <div className="horizontal-slide px-6 lg:px-24 bg-[#050914]">
+        {/* Scene 2: Centralized Hybrid Database */}
+        <div className="horizontal-slide px-6 lg:px-24">
           <div className="absolute w-[800px] h-[800px] bg-brand/5 rounded-full blur-[150px] pointer-events-none top-[-20%] right-[-10%]"></div>
           <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-12 items-center relative z-10">
             <div className="space-y-6">
@@ -95,7 +95,7 @@ export default function Workflows() {
               <p className="text-slate-400 font-light leading-relaxed">From fragmented manual work to intelligent digital estimation. Centralized drafts, market rates, and one-click cloud exports.</p>
             </div>
 
-            <div className="lg:col-span-2 relative flex items-center justify-between w-full p-8 glass-card border-brand/30 rounded-3xl glow-cyan">
+            <div className="lg:col-span-2 relative flex items-center justify-between w-full p-8 solid-card border-brand/30 rounded-3xl glow-cyan">
               <div className="absolute top-1/2 left-0 w-full h-1 bg-brand/20 -translate-y-1/2"></div>
 
               <div className="flow-node">
@@ -129,8 +129,8 @@ export default function Workflows() {
           </div>
         </div>
 
-        {/* Slide 3: Future */}
-        <div className="horizontal-slide px-6 lg:px-24 bg-[#080512]">
+        {/* Scene 3: AI Predictive Engine */}
+        <div className="horizontal-slide px-6 lg:px-24">
           <div className="absolute w-[600px] h-[600px] bg-ai/10 rounded-full blur-[150px] pointer-events-none left-1/4 bottom-0"></div>
           <div className="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-3 gap-12 items-center relative z-10">
             <div className="space-y-6">
@@ -139,7 +139,7 @@ export default function Workflows() {
               <p className="text-slate-400 font-light leading-relaxed">The system learns, predicts, and accelerates estimate preparation. Upload a Scope of Work and watch it auto-populate 50-70% of standard items.</p>
             </div>
 
-            <div className="lg:col-span-2 relative flex items-center justify-between w-full p-8 glass-card border-ai/40 rounded-3xl glow-purple">
+            <div className="lg:col-span-2 relative flex items-center justify-between w-full p-8 solid-card border-ai/40 rounded-3xl glow-purple">
               <div className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-ai/20 via-ai to-ai/20 -translate-y-1/2"></div>
 
               <div className="flow-node">

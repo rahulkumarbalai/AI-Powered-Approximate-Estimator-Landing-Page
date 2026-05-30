@@ -79,12 +79,12 @@ function App() {
 
   return (
     <>
-      {/* Scroll Progress Indicator */}
-      <div className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-brand via-ai to-success z-50 scale-x-0 scroll-progress"></div>
-
       <InteractiveBackground />
 
       <Navbar />
+
+      {/* Scroll Progress Indicator */}
+      <div className="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-brand via-ai to-success scale-x-0 scroll-progress" style={{ zIndex: 60 }}></div>
       
       <main className="relative z-10">
         <Hero />

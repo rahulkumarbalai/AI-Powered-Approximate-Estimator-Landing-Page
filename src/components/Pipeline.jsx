@@ -136,8 +136,8 @@ export default function Pipeline() {
   }, []);
 
   return (
-    <section id="pipeline" className="min-h-screen py-24 px-6 relative flex flex-col justify-center bg-[#070912]">
-      <div className="max-w-6xl mx-auto w-full">
+    <section id="pipeline" className="min-h-screen py-24 px-6 relative flex flex-col justify-center">
+      <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="text-center mb-20 section-header">
           <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">Hybrid Search Pipeline</h2>
           <p className="text-slate-400 max-w-2xl mx-auto">Combining exact regex matches with dense vector and sparse keyword retrieval for unparalleled accuracy.</p>
@@ -150,7 +150,7 @@ export default function Pipeline() {
           <div className="flex flex-col md:flex-row items-stretch justify-between relative z-10 gap-6">
             
             {/* Step 1 */}
-            <div ref={el => nodesRef.current.query = el} className="flex-1 glass-card p-6 rounded-2xl border-white/10 pipeline-step flex flex-col justify-center relative z-10">
+            <div ref={el => nodesRef.current.query = el} className="flex-1 solid-card p-6 rounded-2xl border-white/10 pipeline-step flex flex-col justify-center relative z-10">
               <h4 className="font-bold text-white mb-4 text-center">Select a Query</h4>
               <div className="space-y-3 w-full">
                 <button id="query-exact" className="query-btn w-full text-[10px] py-2 px-2 rounded-lg bg-white/5 hover:bg-brand/20 border border-white/10 hover:border-brand transition-all text-left flex items-center justify-between group">
@@ -170,11 +170,11 @@ export default function Pipeline() {
 
             {/* Step 2 (Parallel) */}
             <div className="flex-[1.5] flex flex-col gap-4">
-              <div ref={el => nodesRef.current.mongo = el} className="glass-card p-6 rounded-2xl border-brand/30 bg-brand/5 pipeline-step text-center flex-1 flex flex-col justify-center pipeline-node transition-opacity duration-300 relative z-10">
+              <div ref={el => nodesRef.current.mongo = el} className="solid-card p-6 rounded-2xl border-brand/30 bg-brand/5 pipeline-step text-center flex-1 flex flex-col justify-center pipeline-node transition-opacity duration-300 relative z-10">
                 <h4 className="font-bold text-brand mb-1">Mongo Regex</h4>
                 <p className="text-[10px] text-slate-400 font-mono">Node.js exact match DB</p>
               </div>
-              <div ref={el => nodesRef.current.fastapi = el} className="glass-card p-6 rounded-2xl border-ai/30 bg-ai/5 pipeline-step text-center flex-1 pipeline-node transition-opacity duration-300 relative z-10 flex flex-col justify-center">
+              <div ref={el => nodesRef.current.fastapi = el} className="solid-card p-6 rounded-2xl border-ai/30 bg-ai/5 pipeline-step text-center flex-1 pipeline-node transition-opacity duration-300 relative z-10 flex flex-col justify-center">
                 <h4 className="font-bold text-ai mb-2">FastAPI Service</h4>
                 <div className="grid grid-cols-2 gap-2 text-[10px] font-mono">
                   <div ref={el => nodesRef.current.faiss = el} className="bg-ai/10 p-2 rounded text-ai-light transition-opacity duration-300 pipeline-node relative z-10">FAISS Semantic<br/>(Top 20)</div>
@@ -184,7 +184,7 @@ export default function Pipeline() {
             </div>
 
             {/* Step 3 */}
-            <div ref={el => nodesRef.current.cross = el} className="flex-1 glass-card p-6 rounded-2xl border-ai/40 glow-purple pipeline-step text-center flex flex-col justify-center relative overflow-hidden pipeline-node transition-opacity duration-300 z-10">
+            <div ref={el => nodesRef.current.cross = el} className="flex-1 solid-card p-6 rounded-2xl border-ai/40 glow-purple pipeline-step text-center flex flex-col justify-center relative overflow-hidden pipeline-node transition-opacity duration-300 z-10">
               <div className="absolute inset-0 bg-gradient-to-br from-ai/20 to-transparent opacity-50 pointer-events-none"></div>
               <div className="relative z-10">
                 <span className="material-symbols-outlined text-ai text-3xl mb-2">layers</span>
@@ -194,7 +194,7 @@ export default function Pipeline() {
             </div>
 
             {/* Step 4 */}
-            <div ref={el => nodesRef.current.result = el} className="flex-1 glass-card p-6 rounded-2xl border-success/30 pipeline-step text-center flex flex-col justify-center pipeline-node transition-opacity duration-300 relative z-10">
+            <div ref={el => nodesRef.current.result = el} className="flex-1 solid-card p-6 rounded-2xl border-success/30 pipeline-step text-center flex flex-col justify-center pipeline-node transition-opacity duration-300 relative z-10">
               <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="material-symbols-outlined text-success">task_alt</span>
               </div>

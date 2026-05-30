@@ -56,7 +56,7 @@ export default function ProblemStatement() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16">
           {/* Before */}
-          <div className="glass-card rounded-3xl p-8 lg:p-12 border-danger/20 glow-danger relative overflow-hidden fade-up-elem">
+          <div className="solid-card rounded-3xl p-8 lg:p-12 border-danger/20 glow-danger relative overflow-hidden fade-up-elem">
             <div className="absolute top-0 right-0 p-6 opacity-10">
               <span className="material-symbols-outlined text-9xl text-danger">history</span>
             </div>
@@ -97,7 +97,7 @@ export default function ProblemStatement() {
           </div>
 
           {/* After */}
-          <div className="glass-card rounded-3xl p-8 lg:p-12 border-brand/30 glow-cyan relative overflow-hidden fade-up-elem">
+          <div className="solid-card rounded-3xl p-8 lg:p-12 border-brand/30 glow-cyan relative overflow-hidden fade-up-elem">
             <div className="absolute top-0 right-0 p-6 opacity-10">
               <span className="material-symbols-outlined text-9xl text-brand">bolt</span>
             </div>
@@ -109,7 +109,7 @@ export default function ProblemStatement() {
             <div className="space-y-8 relative z-10">
               <div className="flex items-start space-x-4 stagger-item-right">
                 <div className="w-10 h-10 rounded-full bg-brand/10 flex items-center justify-center shrink-0 border border-brand/30">
-                  <span className="material-symbols-outlined text-brand text-sm">search_spark</span>
+                  <span className="material-symbols-outlined text-brand text-sm">manage_search</span>
                 </div>
                 <div>
                   <h4 className="font-medium text-white text-lg">Intelligent Hybrid Search</h4>

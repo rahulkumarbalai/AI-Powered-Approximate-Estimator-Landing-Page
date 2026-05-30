@@ -10,13 +10,13 @@ export default function Navbar() {
     ScrollTrigger.create({
       start: "top -80",
       end: 99999,
-      toggleClass: { className: "bg-darkBg/80", targets: "#navbar" }
+      toggleClass: { className: "bg-[#0a0a0a]/90", targets: "#navbar" }
     });
   }, []);
 
   return (
-    <nav className="fixed top-0 w-full z-40 bg-darkBg/50 backdrop-blur-xl border-b border-white/5 transition-transform duration-300" id="navbar">
-      <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <nav className="fixed top-0 w-full z-50 bg-[#0a0a0a]/40 backdrop-blur-md border-b border-white/10 transition-colors duration-300" id="navbar">
+      <div className="max-w-7xl mx-auto px-6 h-16 md:h-20 flex items-center justify-between">
         <div className="flex items-center space-x-3">
           <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-brand to-ai flex items-center justify-center shadow-lg">
             <span className="material-symbols-outlined text-white font-medium">explore</span>
