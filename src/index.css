@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-mono: 'Fira Code', monospace;
+
+  --color-brand: #0ea5e9;
+  --color-brandLight: #38bdf8;
+  --color-ai: #a855f7;
+  --color-success: #10b981;
+  --color-danger: #f43f5e;
+  --color-warning: #f59e0b;
+  --color-darkBg: #050505;
+  --color-darkSurface: #121212;
+}
+
+@layer base {
+  :root {
+    --grid-offset-x: 0px;
+    --grid-offset-y: 0px;
+  }
+  
+  body {
+    background-color: #030303;
+    color: #f1f5f9;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .bg-blueprint {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+    background-size: 40px 40px;
+    background-position: var(--grid-offset-x) var(--grid-offset-y);
+  }
+
+  .glass-card {
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  }
+
+  .glow-cyan {
+    box-shadow: 0 0 60px -15px rgba(14, 165, 233, 0.2);
+  }
+  .glow-purple {
+    box-shadow: 0 0 60px -15px rgba(168, 85, 247, 0.2);
+  }
+  .glow-emerald {
+    box-shadow: 0 0 60px -15px rgba(16, 185, 129, 0.2);
+  }
+  .glow-danger {
+    box-shadow: 0 0 60px -15px rgba(244, 63, 94, 0.2);
+  }
+
+  .char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  .scroll-progress {
+    transform-origin: 0%;
+  }
+
+  .horizontal-section {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+  }
+  .horizontal-wrapper {
+    display: flex;
+    width: 300vw;
+    height: 100vh;
+  }
+  .horizontal-slide {
+    width: 100vw;
+    height: 100vh;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  .path-line {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+  }
+  .flow-node {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+}
+
+/* Scrollbar and Lenis */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #030303;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
