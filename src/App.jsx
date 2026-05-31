@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
+import { Analytics } from '@vercel/analytics/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Workflows from './components/Workflows';
@@ -79,6 +80,7 @@ function App() {
         <Impact />
       </main>
       <Footer />
+      <Analytics />
     </>
   );
 }
