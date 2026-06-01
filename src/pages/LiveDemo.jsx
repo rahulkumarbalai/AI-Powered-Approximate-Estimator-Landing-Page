@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import gsap from 'gsap';
 import InteractiveBackground from '../components/InteractiveBackground';
 import Navbar from '../components/Navbar';
