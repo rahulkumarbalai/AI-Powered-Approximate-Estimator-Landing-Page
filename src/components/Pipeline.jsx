@@ -8,7 +8,7 @@ export default function Pipeline() {
   const nodesRef = useRef({});
   useEffect(() => {
     let ctx = gsap.context(() => {
-      gsap.fromTo(".pipeline-step", 
+      gsap.fromTo(".pipeline-step",
         { y: 40, opacity: 0 },
         {
           y: 0,
@@ -157,8 +157,8 @@ export default function Pipeline() {
               <div ref={el => nodesRef.current.fastapi = el} className="solid-card p-6 rounded-2xl border-ai/30 bg-ai/5 pipeline-step text-center flex-1 pipeline-node transition-opacity duration-300 relative z-10 flex flex-col justify-center shadow-lg">
                 <h4 className="font-bold text-ai mb-2">FastAPI Service</h4>
                 <div className="grid grid-cols-2 gap-2 text-[10px] font-mono">
-                  <div ref={el => nodesRef.current.faiss = el} className="bg-ai/10 p-2 rounded text-[var(--text-primary)] transition-opacity duration-300 pipeline-node relative z-10">FAISS Semantic<br/>(Top 20)</div>
-                  <div ref={el => nodesRef.current.bm25 = el} className="bg-ai/10 p-2 rounded text-[var(--text-primary)] transition-opacity duration-300 pipeline-node relative z-10">BM25 Keyword<br/>(Top 20)</div>
+                  <div ref={el => nodesRef.current.faiss = el} className="bg-ai/10 p-2 rounded text-[var(--text-primary)] transition-opacity duration-300 pipeline-node relative z-10">FAISS Semantic<br />(Top 20)</div>
+                  <div ref={el => nodesRef.current.bm25 = el} className="bg-ai/10 p-2 rounded text-[var(--text-primary)] transition-opacity duration-300 pipeline-node relative z-10">BM25 Keyword<br />(Top 20)</div>
                 </div>
               </div>
             </div>
@@ -167,14 +167,14 @@ export default function Pipeline() {
               <div className="relative z-10">
                 <span className="material-symbols-outlined text-ai text-3xl mb-2">layers</span>
                 <h4 className="font-bold text-white mb-2">Cross-Encoder</h4>
-                <p className="text-[10px] text-slate-400 font-mono">BAAI/bge-reranker-base<br/>Merges & Scores</p>
+                <p className="text-[10px] text-slate-400 font-mono">BAAI/bge-reranker-base<br />Merges & Scores</p>
               </div>
             </div>
             <div ref={el => nodesRef.current.result = el} className="flex-1 solid-card p-6 rounded-2xl border-success/30 pipeline-step text-center flex flex-col justify-center pipeline-node transition-opacity duration-300 relative z-10 shadow-lg">
               <div className="w-12 h-12 bg-success/10 rounded-full flex items-center justify-center mx-auto mb-3">
                 <span className="material-symbols-outlined text-success">task_alt</span>
               </div>
-              <h4 className="font-bold text-white mb-1">Top 5 Results</h4>
+              <h4 className="font-bold text-white mb-1">Top Results</h4>
               <p className="text-[10px] text-slate-400 font-mono">Returned to Client</p>
             </div>
           </div>
